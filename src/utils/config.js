@@ -1,3 +1,3 @@
 module.exports = {
-    weatherApiKey: '31fe952e72917ef41e7e9b6e1ae349f9y',
+    weatherApiKey: '58e737d348510de7a441bb9cd7eb225b',
 }; 

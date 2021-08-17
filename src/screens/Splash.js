@@ -3,14 +3,39 @@ import {View, Image,Dimensions, StyleSheet, Text, Animated, Easing ,SafeAreaView
 import LottieView from 'lottie-react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Main from './Main';
+import {create } from 'apisauce';
+import { weatherApiKey } from '../utils/config';
+
+
 
 
 
 const w = Dimensions.get('window').width;
 const h = Dimensions.get('window').height;
 export default function Splash({navigation}) {
+  
+    const [apiData ,setApiData] = useState({});
     const [screen, setScreen] = useState(null);
     const [timeoutId, setTimeoutId] = useState(null);
+   
+    const api = create({
+        baseURL:`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${weatherApiKey}`,
+    
+    })
+    useEffect(() =>{
+        
+        api
+        .get()
+        .then(response =>response.data)
+        .then(data =>{
+            setApiData(data);
+        }
+        )
+        console.log(JSON.stringify(apiData,null,2));
+        
+    } , [api]);
+    
+    
     
 
       useEffect(() => {
@@ -19,7 +44,7 @@ export default function Splash({navigation}) {
             navigation.replace('Main');
         }, 2000);
          
-      }, []);
+      }, [apiData]);
 
     const background = {
         backgroundColor:Colors.darker,
