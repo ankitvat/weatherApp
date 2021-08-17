@@ -13,16 +13,16 @@ export const weatherSlice = createSlice({
   reducers: {
     setWeather: (state,action) => {
       
+      state.description = action.payload.desc;
+      state.temp = action.payload.temps;
+      state.city = action.payload.city;
+      state.day = action.payload.days;
     },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    },
+    
+    
   },
 })
 
-export const { setWeather, decrement, incrementByAmount } = weatherSlice.actions
+export const { setWeather} = weatherSlice.actions
 
 export default weatherSlice.reducer

@@ -15,7 +15,7 @@ import {
   View,
 } from 'react-native';
 import { Provider } from 'react-redux';
-// import {store } from './store';
+import {store} from './store';
 import {
   Colors,
   DebugInstructions,
@@ -41,7 +41,7 @@ const Section = ({children, title}): Node => {
         style={[
           styles.sectionDescription,
           {
-            color: isDarkMode ? Colors.light : Colors.dark,
+            color: isDarkMode ? Colors.light : Colors.black,
           },
         ]}>
         {children}
@@ -54,17 +54,17 @@ const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.black : Colors.lighter,
   };
 
   return (
-    // <Provider store={store}>
+    <Provider store={store}>
   <NavigationContainer>
     <SafeAreaProvider>
       <MainNavigator />
     </SafeAreaProvider>
   </NavigationContainer>
-  // </Provider>
+   </Provider>
   );
 };
 

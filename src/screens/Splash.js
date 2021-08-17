@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   View,
   Image,
@@ -17,14 +18,17 @@ import {create} from 'apisauce';
 import {weatherApiKey} from '../utils/config';
 import axios from 'axios';
 import GetLocation from 'react-native-get-location';
+import {setWeather} from '../redux/reducer/weatherReducer';
 
 const w = Dimensions.get('window').width;
 const h = Dimensions.get('window').height;
 export default function Splash({navigation}) {
+
   const [apiData, setApiData] = useState({});
   const [screen, setScreen] = useState(null);
   const [timeoutId, setTimeoutId] = useState(null);
   const [gps, setGps] = useState(null);
+  const dispatch = useDispatch();
 
   findLocation = () => {
     GetLocation.getCurrentPosition({
@@ -64,7 +68,7 @@ export default function Splash({navigation}) {
       let currentDate = new Date().getDay();
       
       let city = response.data.['city'].name;
-      console.log(city)
+      
       //   let date  = response.data['list'][0].dt_txt.split(' ')[0];
       let time = response.data['list'][0].dt_txt.split(' ')[1];
       Object.keys(response.data['list']).forEach(key => {
@@ -80,9 +84,9 @@ export default function Splash({navigation}) {
       });
 
       //   temps.push(response.data['list'][0].main.temp);
-      console.log(temps);
-      console.log(desc);
-      console.log(days);
+      
+      data = { temps , desc, days, city, };
+      dispatch(setWeather(data))
       if (response) navigation.replace('Main');
     }
   }, [gps]);
@@ -106,7 +110,7 @@ export default function Splash({navigation}) {
       <LottieView source={require('../utils/splash.json')} autoPlay loop />
       <Text
         style={{
-          fontFamily: 'CircularStd-Book',
+          fontFamily: 'Avenir',
           color: '#d71535',
           fontWeight: '800',
           fontSize: 52,
