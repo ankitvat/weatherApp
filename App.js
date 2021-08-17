@@ -14,7 +14,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
+import { Provider } from 'react-redux';
+// import {store } from './store';
 import {
   Colors,
   DebugInstructions,
@@ -57,11 +58,13 @@ const App: () => Node = () => {
   };
 
   return (
+    // <Provider store={store}>
   <NavigationContainer>
     <SafeAreaProvider>
       <MainNavigator />
     </SafeAreaProvider>
   </NavigationContainer>
+  // </Provider>
   );
 };
 

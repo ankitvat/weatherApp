@@ -11,11 +11,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		22D4A90685F94F77BA23E425 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C947DEB2B9CF495EBA253A2A /* CircularStd-Book.ttf */; };
 		72DAF0D112BDE022BD54C14D /* libPods-weatherApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B956082A293EEC936C8092 /* libPods-weatherApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		DD9D8CA57F26C44015977B97 /* libPods-weatherApp-weatherAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 356027DD792EA43BCD24D3A3 /* libPods-weatherApp-weatherAppTests.a */; };
 		D95486FA35214E869C3F8F4D /* Avenir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE18E32B4CDF4FDA8658A18B /* Avenir.ttf */; };
-		22D4A90685F94F77BA23E425 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C947DEB2B9CF495EBA253A2A /* CircularStd-Book.ttf */; };
+		DD9D8CA57F26C44015977B97 /* libPods-weatherApp-weatherAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 356027DD792EA43BCD24D3A3 /* libPods-weatherApp-weatherAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +43,11 @@
 		356027DD792EA43BCD24D3A3 /* libPods-weatherApp-weatherAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weatherApp-weatherAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B8414F808D64C5E034E5F0 /* Pods-weatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp.release.xcconfig"; path = "Target Support Files/Pods-weatherApp/Pods-weatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = weatherApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE18E32B4CDF4FDA8658A18B /* Avenir.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Avenir.ttf; path = ../src/assets/fonts/Avenir.ttf; sourceTree = "<group>"; };
 		B7B956082A293EEC936C8092 /* libPods-weatherApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weatherApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C303748056B2ED74F4A86C80 /* Pods-weatherApp-weatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp-weatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-weatherApp-weatherAppTests/Pods-weatherApp-weatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C947DEB2B9CF495EBA253A2A /* CircularStd-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Book.ttf"; path = "../src/assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		AE18E32B4CDF4FDA8658A18B /* Avenir.ttf */ = {isa = PBXFileReference; name = "Avenir.ttf"; path = "../src/assets/fonts/Avenir.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C947DEB2B9CF495EBA253A2A /* CircularStd-Book.ttf */ = {isa = PBXFileReference; name = "CircularStd-Book.ttf"; path = "../src/assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,14 +155,14 @@
 			sourceTree = "<group>";
 		};
 		F02D9611737F4AC09FAF520F /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				AE18E32B4CDF4FDA8658A18B /* Avenir.ttf */,
 				C947DEB2B9CF495EBA253A2A /* CircularStd-Book.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
