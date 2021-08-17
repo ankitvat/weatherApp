@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Splash from '../screens/Splash';
 import Main from '../screens/Main'
+import Error from '../screens/Error';
 const Stack = createNativeStackNavigator();
 
 
@@ -18,7 +19,7 @@ function MainNavigator() {
         >
             <Stack.Screen name="Splash"  component = {Splash}/>
             <Stack.Screen name="Main"  component = {Main}/>
-           
+            <Stack.Screen name ="Error" component = {Error}/>
         </Stack.Navigator>
     
     );

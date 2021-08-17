@@ -57,9 +57,9 @@ export default function Splash({navigation}) {
       const currentTime = new Date().toLocaleTimeString();
       console.log(currentTime);
       const response = await api.get();
-        Object.keys(response.data).forEach(key => {
-            console.log(response.data[key]);
-        });
+        // Object.keys(response.data).forEach(key => {
+        //     console.log(response.data[key]);
+        // });
       let data = {};
       let temps = [];
       let desc = [];
@@ -77,7 +77,7 @@ export default function Splash({navigation}) {
           desc.push(response.data['list'][key].weather[0].description);
           days.push(getDays[currentDate]);
           currentDate++;
-          currentDate = currentDate % 6;
+          currentDate = currentDate % 7;
           
           
         }
@@ -87,7 +87,13 @@ export default function Splash({navigation}) {
       
       data = { temps , desc, days, city, };
       dispatch(setWeather(data))
-      if (response) navigation.replace('Main');
+      if (response) {
+        navigation.replace('Main');
+      }
+      else
+      {
+        navigation.replace('Error');
+      }
     }
   }, [gps]);
 
